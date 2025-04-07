@@ -1,54 +1,36 @@
-# Excel File Monitor
+# Excel Monitor
 
-A native Windows application that monitors Excel files for changes and syncs new rows to the cloud.
-
-## Features
-
-- Monitor Excel files for changes in real-time
-- Automatic detection of new rows
-- Cloud synchronization
-- User-friendly interface with logging
-- Easy deployment
+A Windows application that monitors Excel files for changes and syncs new data to the cloud.
 
 ## Installation
 
-1. Ensure Python 3.8 or higher is installed on your system
-2. Clone this repository
-3. Install dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
-4. Create a `.env` file in the root directory with your cloud API credentials:
-   ```
-   CLOUD_API_URL=your_api_url
-   CLOUD_API_KEY=your_api_key
-   ```
+1. Download the latest release `ExcelMonitor.exe`
+2. Double-click to run the application
+3. On first run, you'll be prompted to set a password
+4. Use the Settings button to configure your Cloud API settings
+
+## Features
+
+- Monitors Excel files (xlsx, xls, csv, xlsm, xlsb) for changes
+- Automatically detects and syncs new rows
+- Secure password protection
+- Dark mode interface
+- Configurable cloud API settings
+- Automatic log saving
 
 ## Usage
 
-1. Run the application:
-   ```
-   python excel_monitor.py
-   ```
-2. Select an Excel file to monitor using the file picker
-3. The application will automatically detect and sync new rows
-4. View logs in the application window
+1. Launch ExcelMonitor.exe
+2. Enter your password
+3. Click "Select File" to choose an Excel file to monitor
+4. The application will automatically detect changes and sync new rows
+5. View activity in the log display
+6. Use Settings to configure Cloud API and logging options
 
-## Deployment
+## Support
 
-To create a standalone executable:
-1. Install PyInstaller:
-   ```
-   pip install pyinstaller
-   ```
-2. Build the executable:
-   ```
-   pyinstaller --onefile --windowed excel_monitor.py
-   ```
-3. The executable will be created in the `dist` directory
-
-## Requirements
-
-- Windows 10 or higher
-- Python 3.8 or higher
-- Internet connection for cloud sync 
+If you encounter any issues:
+1. Check that your Excel file is not open in another program
+2. Verify your cloud API settings
+3. Ensure you have proper permissions for the selected files
+4. Check the log files for detailed error messages 
