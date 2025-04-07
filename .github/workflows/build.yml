@@ -35,8 +35,7 @@ jobs:
         python build.py
         dir dist
     
-    - name: Create Release
-      id: create_release
+    - name: Create Release and Upload Asset
       uses: softprops/action-gh-release@v1
       with:
         files: |
@@ -45,14 +44,4 @@ jobs:
         prerelease: false
         generate_release_notes: true
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
-    - name: Upload Release Asset
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./dist/ExcelMonitor.exe
-        asset_name: ExcelMonitor.exe
-        asset_content_type: application/x-msdownload 
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
