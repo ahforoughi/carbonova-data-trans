@@ -38,10 +38,11 @@ A professional Windows application that monitors Excel files for changes and aut
 ## Installation
 
 ### Quick Install
-1. Download the latest release `ExcelMonitor.exe`
-2. Double-click to run the application
-3. On first run, you'll be prompted to set a password
-4. Use the Settings button to configure your Cloud API settings
+1. Go to the [Releases](https://github.com/yourusername/excel-monitor/releases) page
+2. Download the latest release `ExcelMonitor.exe`
+3. Double-click to run the application
+4. On first run, you'll be prompted to set a password
+5. Use the Settings button to configure your Cloud API settings
 
 ### System Requirements
 - Windows 10 or higher
@@ -132,11 +133,50 @@ For additional support:
 
 ## Updates
 
-The application will notify you of available updates. To update:
-1. Download the new version
+### Automatic Updates
+The application will check for updates when launched. To update:
+1. Download the new version from the [Releases](https://github.com/yourusername/excel-monitor/releases) page
 2. Close the current application
 3. Replace the old executable with the new one
 4. Launch the updated version
+
+### Release Notes
+Each release includes:
+- Version number
+- Release date
+- List of changes
+- Known issues
+- Installation instructions
+
+## Development
+
+### Building from Source
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Generate the icon:
+   ```bash
+   python app_icon.py
+   ```
+4. Build the executable:
+   ```bash
+   python build.py
+   ```
+
+### Creating a Release
+1. Update version in `setup.py`
+2. Create and push a new tag:
+   ```bash
+   git tag -a v1.0.0 -m "Release v1.0.0"
+   git push origin v1.0.0
+   ```
+3. GitHub Actions will automatically:
+   - Build the executable
+   - Create a release
+   - Upload the executable
+   - Generate release notes
 
 ## License
 
