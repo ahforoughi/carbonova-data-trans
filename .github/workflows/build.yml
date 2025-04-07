@@ -34,9 +34,17 @@ jobs:
       run: |
         python build.py
         dir dist
+        if exist dist\ExcelMonitor.exe (
+          echo "Executable found"
+          dir dist\ExcelMonitor.exe
+        ) else (
+          echo "Executable not found"
+          exit 1
+        )
     
     - name: Create Release and Upload Asset
       uses: softprops/action-gh-release@v1
+      if: success()
       with:
         files: |
           dist/ExcelMonitor.exe
