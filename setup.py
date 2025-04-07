@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="ExcelMonitor",
-    version="1.0.1",
+    version="1.0.6",
     packages=find_packages(),
     install_requires=[
         'pandas==2.1.0',
