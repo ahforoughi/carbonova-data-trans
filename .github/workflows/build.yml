@@ -31,15 +31,16 @@ jobs:
       continue-on-error: true
     
     - name: Build executable
+      shell: cmd
       run: |
         python build.py
         dir dist
-        if exist dist\ExcelMonitor.exe (
-          echo "Executable found"
-          dir dist\ExcelMonitor.exe
+        if exist "dist\ExcelMonitor.exe" (
+          echo Executable found
+          dir "dist\ExcelMonitor.exe"
         ) else (
-          echo "Executable not found"
-          exit 1
+          echo Executable not found
+          exit /b 1
         )
     
     - name: Create Release and Upload Asset
