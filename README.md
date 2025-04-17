@@ -165,6 +165,30 @@ Each release includes:
    python build.py
    ```
 
+### Running Tests
+1. Install test dependencies:
+   ```bash
+   pip install pytest pytest-qt
+   ```
+2. Run all tests:
+   ```bash
+   python run_tests.py
+   ```
+3. Run specific test files:
+   ```bash
+   python -m pytest tests/test_file_handler.py
+   ```
+
+### Test Coverage
+The application includes comprehensive unit tests for:
+- File handling and monitoring
+- Cloud synchronization
+- Settings management
+- Login functionality
+- UI components
+
+Tests are automatically run on pull requests and before releases.
+
 ### Creating a Release
 1. Update version in `setup.py`
 2. Create and push a new tag:
@@ -173,6 +197,7 @@ Each release includes:
    git push origin v1.0.0
    ```
 3. GitHub Actions will automatically:
+   - Run all tests
    - Build the executable
    - Create a release
    - Upload the executable

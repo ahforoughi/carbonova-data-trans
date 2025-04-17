@@ -6,4 +6,6 @@ This package contains the following modules:
 - file_handler: Contains the ExcelHandler class for monitoring file changes
 - monitor: Contains the ExcelMonitor class for managing the monitoring process
 - ui: Contains the MainWindow class for the application's user interface
-""" 
+"""
+
+# This file makes the modules directory a Python package 
